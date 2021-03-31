@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["src/**/*.ts"],
+  "compilerOptions": {
+    "isolatedModules": false,
+    "lib": ["es2019"],
+    "module": "commonjs",
+    "target": "ES5",
+    "outDir": "dist",
+    "rootDir": "src"
+  }
+}
