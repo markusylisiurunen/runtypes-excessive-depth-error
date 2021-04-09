@@ -1,14 +1,19 @@
 import { Response } from "@my/types";
 
 const body: Response = {
+  id: "uuid",
+  type: "root",
   data: {
-    type: "events",
     id: "uuid",
+    type: "events",
     relationships: {
       customer: {
         data: {
-          type: "customers",
           id: "uuid",
+          type: "customers",
+          links: {
+            updateFirstName: "unknown",
+          },
         },
       },
       resource: {
@@ -19,6 +24,13 @@ const body: Response = {
         },
       },
     },
+  },
+  links: {
+    self: "/me",
+    tasks: "/tasks",
+  },
+  meta: {
+    authorization: "jwt",
   },
 };
 
